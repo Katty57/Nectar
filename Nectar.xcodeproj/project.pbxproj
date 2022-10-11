@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C7E89301C88E77723364D78 /* Pods_Nectar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5FA62011239BEC00E7640 /* Pods_Nectar.framework */; };
+		CE289ADE28F56C8700D10B7C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289ADD28F56C8700D10B7C /* SignInViewController.swift */; };
+		CE289AE228F58A9400D10B7C /* PhoneEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */; };
 		CE82F45928F3EE6100A04849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F45828F3EE6100A04849 /* AppDelegate.swift */; };
-		CE82F45D28F3EE6100A04849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F45C28F3EE6100A04849 /* ViewController.swift */; };
+		CE82F45D28F3EE6100A04849 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */; };
 		CE82F46228F3EE6500A04849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46128F3EE6500A04849 /* Assets.xcassets */; };
-		CE82F46528F3EE6500A04849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46328F3EE6500A04849 /* LaunchScreen.storyboard */; };
 		CE82F47028F3FB6900A04849 /* gilroy-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46E28F3FB6900A04849 /* gilroy-semibold.ttf */; };
 		CE82F47128F3FB6900A04849 /* gilroy-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46F28F3FB6900A04849 /* gilroy-medium.ttf */; };
 /* End PBXBuildFile section */
@@ -20,11 +21,12 @@
 		263D85497601F823418BD79A /* Pods-Nectar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nectar.debug.xcconfig"; path = "Target Support Files/Pods-Nectar/Pods-Nectar.debug.xcconfig"; sourceTree = "<group>"; };
 		2B51D44BDF61ABF671B070A4 /* Pods-Nectar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nectar.release.xcconfig"; path = "Target Support Files/Pods-Nectar/Pods-Nectar.release.xcconfig"; sourceTree = "<group>"; };
 		3DC5FA62011239BEC00E7640 /* Pods_Nectar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nectar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE289ADD28F56C8700D10B7C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterViewController.swift; sourceTree = "<group>"; };
 		CE82F45528F3EE6100A04849 /* Nectar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nectar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82F45828F3EE6100A04849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE82F45C28F3EE6100A04849 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE82F46128F3EE6500A04849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE82F46428F3EE6500A04849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE82F46628F3EE6500A04849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE82F46E28F3FB6900A04849 /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../../Downloads/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		CE82F46F28F3FB6900A04849 /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-medium.ttf"; path = "../../../../../Downloads/gilroy-medium.ttf"; sourceTree = "<group>"; };
@@ -59,6 +61,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE289ADF28F56CAC00D10B7C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE82F45828F3EE6100A04849 /* AppDelegate.swift */,
+				CE82F46628F3EE6500A04849 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE289AE028F56CCE00D10B7C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */,
+				CE289ADD28F56C8700D10B7C /* SignInViewController.swift */,
+				CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		CE82F44C28F3EE6100A04849 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +101,10 @@
 		CE82F45728F3EE6100A04849 /* Nectar */ = {
 			isa = PBXGroup;
 			children = (
-				CE82F45828F3EE6100A04849 /* AppDelegate.swift */,
+				CE289ADF28F56CAC00D10B7C /* Application */,
 				CE82F46D28F3FB4400A04849 /* Fonts */,
-				CE82F45C28F3EE6100A04849 /* ViewController.swift */,
+				CE289AE028F56CCE00D10B7C /* Screens */,
 				CE82F46C28F3F31C00A04849 /* Source */,
-				CE82F46328F3EE6500A04849 /* LaunchScreen.storyboard */,
-				CE82F46628F3EE6500A04849 /* Info.plist */,
 			);
 			path = Nectar;
 			sourceTree = "<group>";
@@ -169,7 +188,6 @@
 			files = (
 				CE82F47028F3FB6900A04849 /* gilroy-semibold.ttf in Resources */,
 				CE82F47128F3FB6900A04849 /* gilroy-medium.ttf in Resources */,
-				CE82F46528F3EE6500A04849 /* LaunchScreen.storyboard in Resources */,
 				CE82F46228F3EE6500A04849 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,23 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE82F45D28F3EE6100A04849 /* ViewController.swift in Sources */,
+				CE289AE228F58A9400D10B7C /* PhoneEnterViewController.swift in Sources */,
+				CE82F45D28F3EE6100A04849 /* WelcomeViewController.swift in Sources */,
 				CE82F45928F3EE6100A04849 /* AppDelegate.swift in Sources */,
+				CE289ADE28F56C8700D10B7C /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CE82F46328F3EE6500A04849 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE82F46428F3EE6500A04849 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE82F46728F3EE6500A04849 /* Debug */ = {
@@ -368,9 +377,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6L662LY2PK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nectar/Info.plist;
+				INFOPLIST_FILE = Nectar/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -398,9 +407,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6L662LY2PK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nectar/Info.plist;
+				INFOPLIST_FILE = Nectar/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

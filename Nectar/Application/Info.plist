@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>launch-screen-color</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<false/>
+		<key>UIImageName</key>
+		<string>launch-screen-logo</string>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>gilroy-semibold.ttf</string>
+		<string>gilroy-medium.ttf</string>
+	</array>
+</dict>
+</plist>
