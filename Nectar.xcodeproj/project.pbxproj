@@ -8,19 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		0C7E89301C88E77723364D78 /* Pods_Nectar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5FA62011239BEC00E7640 /* Pods_Nectar.framework */; };
+		CE069F8228FD2D7100C6C872 /* UnderlinedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE069F8128FD2D7100C6C872 /* UnderlinedTextView.swift */; };
+		CE069F8428FD2D9C00C6C872 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE069F8328FD2D9C00C6C872 /* CustomButton.swift */; };
+		CE069F8628FD58DE00C6C872 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = CE069F8528FD58DE00C6C872 /* swiftgen.yml */; };
+		CE069F8A28FD5B0E00C6C872 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE069F8928FD5B0E00C6C872 /* XCAssets+Generated.swift */; };
+		CE069F8C28FD601E00C6C872 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE069F8B28FD601E00C6C872 /* Colors.xcassets */; };
+		CE069F8E28FD63A400C6C872 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE069F8D28FD63A400C6C872 /* Fonts+Generated.swift */; };
+		CE069F9128FD653400C6C872 /* gilroy-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE069F8F28FD653400C6C872 /* gilroy-medium.ttf */; };
+		CE069F9228FD653400C6C872 /* gilroy-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE069F9028FD653400C6C872 /* gilroy-semibold.ttf */; };
+		CE19F56F28F6C76700DC98F5 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19F56E28F6C76700DC98F5 /* VerificationViewController.swift */; };
+		CE19F57328F6DC1300DC98F5 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19F57228F6DC1300DC98F5 /* LocationViewController.swift */; };
+		CE19F57528F6DD4700DC98F5 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19F57428F6DD4700DC98F5 /* TemplateViewController.swift */; };
+		CE19F57728F6E2FC00DC98F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19F57628F6E2FC00DC98F5 /* LoginViewController.swift */; };
+		CE19F57928F6E32200DC98F5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19F57828F6E32200DC98F5 /* SignUpViewController.swift */; };
 		CE289ADE28F56C8700D10B7C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289ADD28F56C8700D10B7C /* SignInViewController.swift */; };
 		CE289AE228F58A9400D10B7C /* PhoneEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */; };
 		CE82F45928F3EE6100A04849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F45828F3EE6100A04849 /* AppDelegate.swift */; };
 		CE82F45D28F3EE6100A04849 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */; };
 		CE82F46228F3EE6500A04849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46128F3EE6500A04849 /* Assets.xcassets */; };
-		CE82F47028F3FB6900A04849 /* gilroy-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46E28F3FB6900A04849 /* gilroy-semibold.ttf */; };
-		CE82F47128F3FB6900A04849 /* gilroy-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE82F46F28F3FB6900A04849 /* gilroy-medium.ttf */; };
+		CEBACB4A28F8163100829273 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBACB4928F8163100829273 /* UITextField+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		263D85497601F823418BD79A /* Pods-Nectar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nectar.debug.xcconfig"; path = "Target Support Files/Pods-Nectar/Pods-Nectar.debug.xcconfig"; sourceTree = "<group>"; };
 		2B51D44BDF61ABF671B070A4 /* Pods-Nectar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nectar.release.xcconfig"; path = "Target Support Files/Pods-Nectar/Pods-Nectar.release.xcconfig"; sourceTree = "<group>"; };
 		3DC5FA62011239BEC00E7640 /* Pods_Nectar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nectar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE069F8128FD2D7100C6C872 /* UnderlinedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextView.swift; sourceTree = "<group>"; };
+		CE069F8328FD2D9C00C6C872 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		CE069F8528FD58DE00C6C872 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		CE069F8928FD5B0E00C6C872 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		CE069F8B28FD601E00C6C872 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CE069F8D28FD63A400C6C872 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
+		CE069F8F28FD653400C6C872 /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-medium.ttf"; sourceTree = "<group>"; };
+		CE069F9028FD653400C6C872 /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-semibold.ttf"; sourceTree = "<group>"; };
+		CE19F56E28F6C76700DC98F5 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		CE19F57228F6DC1300DC98F5 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		CE19F57428F6DD4700DC98F5 /* TemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		CE19F57628F6E2FC00DC98F5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE19F57828F6E32200DC98F5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE289ADD28F56C8700D10B7C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterViewController.swift; sourceTree = "<group>"; };
 		CE82F45528F3EE6100A04849 /* Nectar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nectar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,8 +53,7 @@
 		CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE82F46128F3EE6500A04849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE82F46628F3EE6500A04849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE82F46E28F3FB6900A04849 /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../../Downloads/gilroy-semibold.ttf"; sourceTree = "<group>"; };
-		CE82F46F28F3FB6900A04849 /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-medium.ttf"; path = "../../../../../Downloads/gilroy-medium.ttf"; sourceTree = "<group>"; };
+		CEBACB4928F8163100829273 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +85,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE069F8028FD2C9A00C6C872 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE069F8128FD2D7100C6C872 /* UnderlinedTextView.swift */,
+				CE069F8328FD2D9C00C6C872 /* CustomButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CE069F8828FD5AC100C6C872 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CE069F8D28FD63A400C6C872 /* Fonts+Generated.swift */,
+				CE069F8928FD5B0E00C6C872 /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		CE289ADF28F56CAC00D10B7C /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +117,11 @@
 			children = (
 				CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */,
 				CE289ADD28F56C8700D10B7C /* SignInViewController.swift */,
+				CE19F57228F6DC1300DC98F5 /* LocationViewController.swift */,
+				CE19F57428F6DD4700DC98F5 /* TemplateViewController.swift */,
+				CE19F57828F6E32200DC98F5 /* SignUpViewController.swift */,
+				CE19F56E28F6C76700DC98F5 /* VerificationViewController.swift */,
+				CE19F57628F6E2FC00DC98F5 /* LoginViewController.swift */,
 				CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */,
 			);
 			path = Screens;
@@ -83,6 +130,7 @@
 		CE82F44C28F3EE6100A04849 = {
 			isa = PBXGroup;
 			children = (
+				CE069F8528FD58DE00C6C872 /* swiftgen.yml */,
 				CE82F45728F3EE6100A04849 /* Nectar */,
 				CE82F45628F3EE6100A04849 /* Products */,
 				694D29D2C76E43464C0AA7C8 /* Pods */,
@@ -101,6 +149,9 @@
 		CE82F45728F3EE6100A04849 /* Nectar */ = {
 			isa = PBXGroup;
 			children = (
+				CE069F8828FD5AC100C6C872 /* Generated */,
+				CE069F8028FD2C9A00C6C872 /* CustomViews */,
+				CEBACB4828F815F100829273 /* Extension */,
 				CE289ADF28F56CAC00D10B7C /* Application */,
 				CE82F46D28F3FB4400A04849 /* Fonts */,
 				CE289AE028F56CCE00D10B7C /* Screens */,
@@ -113,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CE82F46128F3EE6500A04849 /* Assets.xcassets */,
+				CE069F8B28FD601E00C6C872 /* Colors.xcassets */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -120,10 +172,18 @@
 		CE82F46D28F3FB4400A04849 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CE82F46F28F3FB6900A04849 /* gilroy-medium.ttf */,
-				CE82F46E28F3FB6900A04849 /* gilroy-semibold.ttf */,
+				CE069F8F28FD653400C6C872 /* gilroy-medium.ttf */,
+				CE069F9028FD653400C6C872 /* gilroy-semibold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEBACB4828F815F100829273 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEBACB4928F8163100829273 /* UITextField+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +198,7 @@
 				CE82F45228F3EE6100A04849 /* Frameworks */,
 				CE82F45328F3EE6100A04849 /* Resources */,
 				2AFD91DE7AE51B520B0601A9 /* [CP] Embed Pods Frameworks */,
+				CE069F8728FD592400C6C872 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -186,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE82F47028F3FB6900A04849 /* gilroy-semibold.ttf in Resources */,
-				CE82F47128F3FB6900A04849 /* gilroy-medium.ttf in Resources */,
+				CE069F8C28FD601E00C6C872 /* Colors.xcassets in Resources */,
+				CE069F9228FD653400C6C872 /* gilroy-semibold.ttf in Resources */,
 				CE82F46228F3EE6500A04849 /* Assets.xcassets in Resources */,
+				CE069F8628FD58DE00C6C872 /* swiftgen.yml in Resources */,
+				CE069F9128FD653400C6C872 /* gilroy-medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +297,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nectar/Pods-Nectar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE069F8728FD592400C6C872 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,10 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE069F8A28FD5B0E00C6C872 /* XCAssets+Generated.swift in Sources */,
 				CE289AE228F58A9400D10B7C /* PhoneEnterViewController.swift in Sources */,
+				CE069F8228FD2D7100C6C872 /* UnderlinedTextView.swift in Sources */,
+				CEBACB4A28F8163100829273 /* UITextField+Ext.swift in Sources */,
 				CE82F45D28F3EE6100A04849 /* WelcomeViewController.swift in Sources */,
+				CE19F56F28F6C76700DC98F5 /* VerificationViewController.swift in Sources */,
+				CE19F57328F6DC1300DC98F5 /* LocationViewController.swift in Sources */,
+				CE19F57728F6E2FC00DC98F5 /* LoginViewController.swift in Sources */,
 				CE82F45928F3EE6100A04849 /* AppDelegate.swift in Sources */,
+				CE069F8428FD2D9C00C6C872 /* CustomButton.swift in Sources */,
+				CE069F8E28FD63A400C6C872 /* Fonts+Generated.swift in Sources */,
+				CE19F57928F6E32200DC98F5 /* SignUpViewController.swift in Sources */,
 				CE289ADE28F56C8700D10B7C /* SignInViewController.swift in Sources */,
+				CE19F57528F6DD4700DC98F5 /* TemplateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

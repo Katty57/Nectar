@@ -1,0 +1,14 @@
+output_dir: Nectar/Generated/
+xcassets:
+  inputs:
+  - Nectar/Source/Assets.xcassets
+  - Nectar/Source/Colors.xcassets
+  #  - Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: XCAssets+Generated.swift
+fonts:
+  inputs: Nectar/Fonts
+  outputs:
+    templateName: swift5
+    output: Fonts+Generated.swift

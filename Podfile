@@ -7,4 +7,5 @@ target 'Nectar' do
 
   # Pods for Nectar
   pod 'SnapKit', '~> 5.6.0'
+  pod 'SwiftGen'
 end

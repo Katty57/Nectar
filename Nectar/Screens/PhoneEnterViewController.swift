@@ -7,63 +7,104 @@
 
 import UIKit
 
-class PhoneEnterViewController: UIViewController {
+class PhoneEnterViewController: TemplateViewController {
     
-    lazy var numberView: UIView = {
-        let view = UIView()
-        
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "country-flag")
-        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "+880"
-        label.font = UIFont(name: "Gilroy-Medium-", size: 18)
-        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
-        
-        let textField = UITextField()
-        textField.borderStyle = .none
-        textField.font = UIFont(name: "Gilroy-Medium-", size: 18)
-        textField.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
-        textField.backgroundColor = .red
-        
-        let lineImageView = UIImageView()
-        lineImageView.image = UIImage(named: "underline")
-        
-        [imageView, label, textField, lineImageView].forEach {
-            view.addSubview($0)
-        }
-        
-        imageView.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview()
-            make.width.equalTo(33)
-            make.height.equalTo(23)
-        }
-        
-        label.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalTo(imageView.snp.trailing).offset(12)
-            make.width.equalTo(42)
-        }
-        
-        textField.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalTo(label.snp.trailing).offset(12)
-            make.trailing.equalToSuperview()
-            make.height.equalTo(23)
-        }
-        
-        lineImageView.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(15)
-            make.leading.trailing.bottom.equalToSuperview()
-        }
-        
+        label.text = "Enter your mobile number"
+        label.textColor = UIColor(asset: Asset.Colors.titleBlack)
+        label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 26)
+        return label
+    }()
+    
+    private lazy var subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Mobile Number"
+        label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
+        label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 16)
+        return label
+    }()
+    
+    private lazy var numberView: UIView = {
+        let view = UnderlinedTextView(placeholder: "", imageName: Asset.Assets.countryFlag, labelText: "+880")
+        view.setNumberKeyboard()
         return view
     }()
-
+    
+    private lazy var nextButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(asset: Asset.Assets.nextButton), for: .normal)
+        button.addTarget(self, action: #selector(phoneEntered), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addKeyboardObserver()
+    }
+    
+    private func addKeyboardObserver () {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func addSubviews() {
+        super.addSubviews()
+        [titleLabel, subtitleLabel, numberView, nextButton].forEach {
+            view.addSubview($0)
+        }
+    }
+    
+    override func configConstraints() {
+        super.configConstraints()
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(140)
+            $0.leading.equalToSuperview().offset(25)
+        }
+        
+        subtitleLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(27)
+            $0.leading.equalToSuperview().offset(25)
+        }
+        
+        numberView.snp.makeConstraints {
+            $0.top.equalTo(subtitleLabel.snp.bottom).offset(10)
+            $0.height.equalTo(39)
+            $0.leading.trailing.equalToSuperview().inset(25)
+        }
+        
+        nextButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-24)
+            $0.bottom.equalToSuperview().offset(-80)
+            $0.height.width.equalTo(67)
+        }
+    }
+    
+    @objc private func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let height = keyboardSize.height + 20
+            nextButton.snp.remakeConstraints {
+                $0.bottom.equalToSuperview().offset(-height)
+                $0.trailing.equalToSuperview().offset(-24)
+                $0.height.width.equalTo(67)
+            }
+        }
+    }
 
-        view.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+    @objc private func keyboardWillHide(_ notification: NSNotification) {
+        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            nextButton.snp.remakeConstraints {
+                $0.bottom.equalToSuperview().offset(-80)
+                $0.trailing.equalToSuperview().offset(-24)
+                $0.height.width.equalTo(67)
+            }
+        }
+    }
+    
+    @objc private func phoneEntered (_ sender: UIButton) {
+        let vc = VerificationViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -9,107 +9,53 @@ import UIKit
 
 final class SignInViewController: UIViewController {
     
-    lazy var headerMaskView: UIView = {
-        let view = UIView()
-        
+    private lazy var headerMaskImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "sign-in-header")
-        
-        view.addSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.bottom.trailing.leading.equalToSuperview()
-        }
-        
-        return view
+        imageView.image = UIImage(asset: Asset.Assets.signInHeader)
+        return imageView
     }()
     
-    lazy var headingLabel: UILabel = {
+    private lazy var headingLabel: UILabel = {
         let label = UILabel()
         label.text = """
         Get your groceries
         with nectar
         """
         label.numberOfLines = 0
-        label.font = UIFont(name: "Gilroy-Semibold", size: 26)
-        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
+        label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 26)
+        label.textColor = UIColor(asset: Asset.Colors.titleBlack)
         return label
     }()
     
-    lazy var numberView: UIView = {
-        let view = UIView()
+    private lazy var numberView: UIView = {
+        let view = UnderlinedTextView(placeholder: "", imageName: Asset.Assets.countryFlag, labelText: "+880")
+        view.disableUserIneration()
+        view.isUserInteractionEnabled = true
         
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "country-flag")
-        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        
-        let label = UILabel()
-        label.text = "+880"
-        label.font = UIFont(name: "Gilroy-Medium-", size: 18)
-        label.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
-        
-        let textField = UITextField()
-        textField.borderStyle = .none
-        textField.font = UIFont(name: "Gilroy-Medium-", size: 18)
-        textField.textColor = UIColor(red: 0.012, green: 0.012, blue: 0.012, alpha: 1)
-        textField.addTarget(self, action: #selector(phoneVerificationSelected(_:)), for: .editingDidBegin)
-        textField.backgroundColor = .red
-        
-        let lineImageView = UIImageView()
-        lineImageView.image = UIImage(named: "underline")
-        
-        [imageView, label, textField, lineImageView].forEach {
-            view.addSubview($0)
-        }
-        
-        imageView.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview()
-            make.width.equalTo(33)
-            make.height.equalTo(23)
-        }
-        
-        label.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalTo(imageView.snp.trailing).offset(12)
-            make.width.equalTo(42)
-        }
-        
-        textField.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalTo(label.snp.trailing).offset(12)
-            make.trailing.equalToSuperview()
-            make.height.equalTo(23)
-        }
-        
-        lineImageView.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(15)
-            make.leading.trailing.bottom.equalToSuperview()
-        }
-        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(phoneVerificationSelected(_:)))
+        view.addGestureRecognizer(gesture)
         return view
     }()
     
-    lazy var orSignLabel: UILabel = {
+    private lazy var orSignLabel: UILabel = {
         let label = UILabel()
         label.text = "Or connect with social media"
-        label.textColor = UIColor(red: 0.51, green: 0.51, blue: 0.51, alpha: 1)
-        label.font = UIFont(name: "Gilroy-Semibold", size: 14)
+        label.textColor = UIColor(asset: Asset.Colors.darkGray)
+        label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 14)
         label.textAlignment = .center
         return label
     }()
     
-    lazy var buttonsStackView: UIStackView = {
+    private lazy var buttonsStackView: UIStackView = {
         let stackView   = UIStackView()
         stackView.axis  = .vertical
         stackView.distribution  = UIStackView.Distribution.fillEqually
         stackView.alignment = UIStackView.Alignment.fill
         stackView.spacing   = 10.0
         
-        let googleButton = signInCustomButton(imageName: "google-icon",
-                                              labelText: "Continue with Google",
-                                              color: UIColor(red: 0.325, green: 0.514, blue: 0.925, alpha: 1))
-        let facebookButton = signInCustomButton(imageName: "facebook-icon",
-                                                labelText: "Continue with Facebook",
-                                                color: UIColor(red: 0.29, green: 0.4, blue: 0.675, alpha: 1))
+        let googleButton = CustomButton(title: "Continue with Google", color: Asset.Colors.googleButtonColor, imageName: Asset.Assets.googleIcon)
+        let facebookButton = CustomButton(title: "Continue with Facebook", color: Asset.Colors.facebookButtonColor, imageName: Asset.Assets.facebookIcon)
+        
         var iter = 0
         [googleButton, facebookButton].forEach {
             $0.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
@@ -123,80 +69,48 @@ final class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+        setUpView()
         addSubviews()
         configConstraints()
     }
     
+    private func setUpView () {
+        view.backgroundColor = UIColor(asset: Asset.Colors.lightGray)
+    }
+    
     private func addSubviews () {
-        [headerMaskView, headingLabel, numberView, orSignLabel, buttonsStackView].forEach {
+        [headerMaskImageView, headingLabel, numberView, orSignLabel, buttonsStackView].forEach {
             view.addSubview($0)
         }
     }
     
     private func configConstraints () {
-        headerMaskView.snp.makeConstraints { make in
-            make.top.trailing.leading.equalToSuperview()
-            make.height.equalTo(374)
+        headerMaskImageView.snp.makeConstraints {
+            $0.top.trailing.leading.equalToSuperview()
+            $0.height.equalTo(374)
         }
         
-        headingLabel.snp.makeConstraints { make in
-            make.top.equalTo(headerMaskView.snp.bottom).offset(49)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
+        headingLabel.snp.makeConstraints {
+            $0.top.equalTo(headerMaskImageView.snp.bottom).offset(49)
+            $0.leading.trailing.equalToSuperview().inset(25)
         }
         
-        numberView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.top.equalTo(headingLabel.snp.bottom).offset(30)
-            make.height.equalTo(39)
+        numberView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(25)
+            $0.top.equalTo(headingLabel.snp.bottom).offset(30)
+            $0.height.equalTo(39)
         }
         
-        orSignLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.top.equalTo(numberView.snp.bottom).offset(40)
+        orSignLabel.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(25)
+            $0.top.equalTo(numberView.snp.bottom).offset(40)
         }
         
-        buttonsStackView.snp.makeConstraints { make in
-            make.top.equalTo(orSignLabel.snp.bottom).offset(37)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.height.equalTo(154)
+        buttonsStackView.snp.makeConstraints {
+            $0.top.equalTo(orSignLabel.snp.bottom).offset(37)
+            $0.leading.trailing.equalToSuperview().inset(25)
+            $0.height.equalTo(154)
         }
-    }
-    
-    private func signInCustomButton (imageName: String, labelText: String, color: UIColor) -> UIButton {
-        let button = UIButton()
-        button.backgroundColor = color
-        button.layer.cornerRadius = 19
-        button.clipsToBounds = true
-        
-        let label = UILabel()
-        label.textColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
-        label.text = labelText
-        label.font = UIFont(name: "Gilroy-Semibold", size: 18)
-        label.textAlignment = .center
-        
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: imageName)
-        
-        button.addSubview(label)
-        button.addSubview(imageView)
-        
-        imageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(35)
-        }
-        label.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(30)
-            make.trailing.equalToSuperview().offset(-30)
-        }
-        
-        return button
     }
     
     @objc private func signInButtonTapped (_ sender: UIButton) {
@@ -213,7 +127,7 @@ final class SignInViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @objc private func phoneVerificationSelected (_ sender: UITextField) {
+    @objc private func phoneVerificationSelected (_ sender: UITapGestureRecognizer) {
         let vc = PhoneEnterViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         
