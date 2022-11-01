@@ -77,6 +77,7 @@ class LoginViewController: TemplateViewController {
     
     private lazy var loginButton: UIButton = {
         let button = CustomButton(title: "Log In", color: Asset.Colors.green)
+        button.addTarget(self, action: #selector(presentShop(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -119,7 +120,6 @@ class LoginViewController: TemplateViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func addSubviews() {
@@ -189,6 +189,12 @@ class LoginViewController: TemplateViewController {
             $0.height.equalTo(14)
             $0.width.equalTo(228)
         }
+    }
+    
+    @objc func presentShop (_ sender: UIButton) {
+        let vc = TabBarController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func presentSignUpScreen (_ sender: UIButton) {

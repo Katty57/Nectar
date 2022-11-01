@@ -20,12 +20,18 @@ internal typealias Font = FontConvertible.Font
 
 // swiftlint:disable identifier_name line_length type_body_length
 internal enum FontFamily {
-  internal enum Gilroy {
-    internal static let medium = FontConvertible(name: "Gilroy-Medium", family: "Gilroy", path: "gilroy-medium.ttf")
-    internal static let semiBold = FontConvertible(name: "Gilroy-SemiBold", family: "Gilroy", path: "gilroy-semibold.ttf")
-    internal static let all: [FontConvertible] = [medium, semiBold]
+  internal enum Aclonica {
+    internal static let regular = FontConvertible(name: "Aclonica-Regular", family: "Aclonica", path: "aclonica-regular.ttf")
+    internal static let all: [FontConvertible] = [regular]
   }
-  internal static let allCustomFonts: [FontConvertible] = [Gilroy.all].flatMap { $0 }
+  internal enum Gilroy {
+    internal static let bold = FontConvertible(name: "Gilroy-Bold", family: "Gilroy", path: "gilroy-bold.ttf")
+    internal static let medium = FontConvertible(name: "Gilroy-Medium", family: "Gilroy", path: "gilroy-medium.ttf")
+    internal static let regular = FontConvertible(name: "Gilroy-Regular", family: "Gilroy", path: "gilroy-regular.ttf")
+    internal static let semiBold = FontConvertible(name: "Gilroy-SemiBold", family: "Gilroy", path: "gilroy-semibold.ttf")
+    internal static let all: [FontConvertible] = [bold, medium, regular, semiBold]
+  }
+  internal static let allCustomFonts: [FontConvertible] = [Aclonica.all, Gilroy.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

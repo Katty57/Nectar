@@ -79,4 +79,7 @@ class CustomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func changeTitleColor (color: UIColor) {
+        customTitleLabel.textColor = color
+    }
 }

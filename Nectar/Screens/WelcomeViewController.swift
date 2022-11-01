@@ -95,6 +95,7 @@ final class WelcomeViewController: UIViewController {
     
     @objc private func getStartedPressed (_ sender: UIButton) {
         let vc = SignInViewController()
+//        let vc = TabBarController()
         let navVC = UINavigationController(rootViewController: vc)
         navVC.modalPresentationStyle = .fullScreen
         self.present(navVC, animated: true, completion: nil)
