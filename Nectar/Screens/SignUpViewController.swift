@@ -9,14 +9,14 @@ import UIKit
 
 class SignUpViewController: TemplateViewController {
     
-    private lazy var logoImageView: UIImageView = {
+    private var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.logoColoredCarrot)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Sign Up"
         label.textColor = UIColor(asset: Asset.Colors.titleBlack)
@@ -24,7 +24,7 @@ class SignUpViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Enter your credentials to continue"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -32,7 +32,7 @@ class SignUpViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var usernameLabel: UILabel = {
+    private var usernameLabel: UILabel = {
         let label = UILabel()
         label.text = "Username"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -40,13 +40,13 @@ class SignUpViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var usernameTextView: UIView = {
+    private var usernameTextView: UIView = {
         let view = UnderlinedTextView(placeholder: "")
         view.setText(text: "Afsar Hossen Shuvo")
         return view
     }()
     
-    private lazy var emailLabel: UILabel = {
+    private var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "Email"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -54,13 +54,13 @@ class SignUpViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var emailTextView: UIView = {
+    private var emailTextView: UIView = {
         let view = UnderlinedTextView(placeholder: "", textFieldType: .email)
         view.setText(text: "imshuvo97@gmail.com")
         return view
     }()
     
-    private lazy var passwordLabel: UILabel = {
+    private var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Password"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -68,13 +68,13 @@ class SignUpViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var passwordTextView: UIView = {
+    private var passwordTextView: UIView = {
         let view = UnderlinedTextView(placeholder: "", textFieldType: .password)
         view.setText(text: "password")
         return view
     }()
     
-    private lazy var hyperlinkLabel: UILabel = {
+    private var hyperlinkLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont(font: FontFamily.Gilroy.medium, size: 14)

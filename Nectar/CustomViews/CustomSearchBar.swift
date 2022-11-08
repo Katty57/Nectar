@@ -7,22 +7,28 @@
 
 import UIKit
 
+protocol TextFieldValueUser {
+    func updateView (with text: String)
+}
+
 class CustomSearchBar: UIView {
     
-    private lazy var searchButton: UIButton = {
+//    private var valueUser: TextFieldValueUser
+    
+    private var searchButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(asset: Asset.Assets.searchMagnifier), for: .normal)
         return button
     }()
     
-    private lazy var cancelButton: UIButton = {
+    private var cancelButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(asset: Asset.Assets.searchCancel), for: .normal)
         button.isHidden = true
         return button
     }()
     
-    private lazy var searchTextField: UITextField = {
+    lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Search Store"
         textField.textColor = UIColor(asset: Asset.Colors.searchGray)
@@ -30,13 +36,21 @@ class CustomSearchBar: UIView {
         textField.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         return textField
     }()
-
+    
     init () {
-        super.init(frame: .zero)
         
+        super.init(frame: .zero)
         setUpView()
         setUpConstraints()
     }
+    
+//    init (textFiledValueUser: TextFieldValueUser) {
+//        self.valueUser = textFiledValueUser
+//
+//        super.init(frame: .zero)
+//        setUpView()
+//        setUpConstraints()
+//    }
     
     private func setUpView () {
         backgroundColor = UIColor(asset: Asset.Colors.searchLightGray)
@@ -77,9 +91,11 @@ class CustomSearchBar: UIView {
 }
 
 extension CustomSearchBar: UITextFieldDelegate {
+    
     @objc func textFieldDidChanged (_ sender: UITextField) {
-        if sender.text != "" {
+        if let text = sender.text {
             cancelButton.isHidden = false
+//            valueUser.updateView(with: text)
         } else {
             cancelButton.isHidden = true
         }

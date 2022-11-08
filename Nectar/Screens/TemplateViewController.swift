@@ -9,26 +9,26 @@ import UIKit
 
 class TemplateViewController: UIViewController {
     
-    private lazy var topMask: UIImageView = {
+    private var topMask: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.topMask)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    private lazy var bottomMask: UIImageView = {
+    private var bottomMask: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.bottomMask)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    private lazy var contentScrollView: UIScrollView = {
+    private var contentScrollView: UIScrollView = {
         let scrollView = UIScrollView()
         return scrollView
     }()
     
-    lazy var contentView: UIView = {
+    var contentView: UIView = {
         let view = UIView()
         return view
     }()

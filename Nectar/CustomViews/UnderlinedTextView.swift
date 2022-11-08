@@ -28,7 +28,7 @@ class UnderlinedTextView: UIView {
         return label
     }()
     
-    private lazy var infoTextField: UITextField = {
+    private var infoTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .none
         textField.textColor = UIColor(asset: Asset.Colors.titleBlack)
@@ -36,7 +36,7 @@ class UnderlinedTextView: UIView {
         return textField
     }()
     
-    private lazy var lineImageView: UIImageView = {
+    private var lineImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.underline)
         return imageView

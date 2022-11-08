@@ -62,16 +62,22 @@
 		CE9BBB9C290862D40006A071 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BBB9B290862D40006A071 /* AccountViewController.swift */; };
 		CE9BBB9F290862FC0006A071 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BBB9E290862FC0006A071 /* AccountTableViewCell.swift */; };
 		CE9BBBA3290867020006A071 /* gilroy-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9BBBA2290867020006A071 /* gilroy-regular.ttf */; };
+		CEA9DC0D291AC0660000ADEF /* PhoneEnterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA9DC0C291AC0660000ADEF /* PhoneEnterCoordinator.swift */; };
 		CEB4CFB42902500200184557 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CFB32902500200184557 /* CustomSearchBar.swift */; };
 		CEB4CFB82902545E00184557 /* gilroy-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEB4CFB72902545E00184557 /* gilroy-bold.ttf */; };
 		CEB4CFBC290277CA00184557 /* ExploreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CFBB290277CA00184557 /* ExploreModel.swift */; };
 		CEB4CFBE29027ADD00184557 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CFBD29027ADD00184557 /* String+Ext.swift */; };
 		CEB4CFC029027BD000184557 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CFBF29027BD000184557 /* ExploreCollectionViewCell.swift */; };
 		CEB4CFC2290288D700184557 /* ExploreCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4CFC1290288D700184557 /* ExploreCategoryViewController.swift */; };
+		CEB63D91291912AF00BEBE4C /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB63D90291912AF00BEBE4C /* SignInCoordinator.swift */; };
+		CEB63D932919138300BEBE4C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB63D922919138300BEBE4C /* HomeCoordinator.swift */; };
+		CEB63D952919148A00BEBE4C /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB63D942919148A00BEBE4C /* WelcomeCoordinator.swift */; };
+		CEB63D982919683200BEBE4C /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB63D972919683200BEBE4C /* TabBarCoordinator.swift */; };
 		CEBACB4A28F8163100829273 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBACB4928F8163100829273 /* UITextField+Ext.swift */; };
 		CEC6EBFE2903BC1B00D0A966 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6EBFD2903BC1A00D0A966 /* CustomNavigationBar.swift */; };
 		CEC6EC032903F0AC00D0A966 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6EC022903F0AC00D0A966 /* CartViewController.swift */; };
 		CEC6EC062903F24600D0A966 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6EC052903F24600D0A966 /* CartTableViewCell.swift */; };
+		CEFBAF442918075700FC7D21 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBAF432918075700FC7D21 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,16 +141,22 @@
 		CE9BBB9B290862D40006A071 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CE9BBB9E290862FC0006A071 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		CE9BBBA2290867020006A071 /* gilroy-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-regular.ttf"; sourceTree = "<group>"; };
+		CEA9DC0C291AC0660000ADEF /* PhoneEnterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterCoordinator.swift; sourceTree = "<group>"; };
 		CEB4CFB32902500200184557 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		CEB4CFB72902545E00184557 /* gilroy-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-bold.ttf"; sourceTree = "<group>"; };
 		CEB4CFBB290277CA00184557 /* ExploreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreModel.swift; sourceTree = "<group>"; };
 		CEB4CFBD29027ADD00184557 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		CEB4CFBF29027BD000184557 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEB4CFC1290288D700184557 /* ExploreCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryViewController.swift; sourceTree = "<group>"; };
+		CEB63D90291912AF00BEBE4C /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		CEB63D922919138300BEBE4C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CEB63D942919148A00BEBE4C /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
+		CEB63D972919683200BEBE4C /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		CEBACB4928F8163100829273 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		CEC6EBFD2903BC1A00D0A966 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		CEC6EC022903F0AC00D0A966 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		CEC6EC052903F24600D0A966 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		CEFBAF432918075700FC7D21 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +191,7 @@
 		CE04804029012E4C00D4B3E1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CEB63D922919138300BEBE4C /* HomeCoordinator.swift */,
 				CE3CCCFA28FEA8D200874325 /* HomeViewController.swift */,
 				CE0480472901312400D4B3E1 /* TableViewCell */,
 				CE0480492901314100D4B3E1 /* Model */,
@@ -253,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				CE82F45828F3EE6100A04849 /* AppDelegate.swift */,
+				CEFBAF432918075700FC7D21 /* Coordinator.swift */,
 				CE82F46628F3EE6500A04849 /* Info.plist */,
 			);
 			path = Application;
@@ -261,20 +275,15 @@
 		CE289AE028F56CCE00D10B7C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */,
-				CE04804029012E4C00D4B3E1 /* Home */,
-				CEB4CFB229024FBF00184557 /* Explore */,
-				CEC6EC012903F08500D0A966 /* Cart */,
-				CE9BBB9229081FDA0006A071 /* Favourite */,
-				CE9BBB9A290862AC0006A071 /* Account */,
-				CE3CCCFC28FEA91300874325 /* TabBarController.swift */,
-				CE19F57228F6DC1300DC98F5 /* LocationViewController.swift */,
+				CEA9DC09291ABE300000ADEF /* Welcome */,
+				CEA9DC08291ABE040000ADEF /* TabBar */,
+				CEA9DC0A291ABE410000ADEF /* SignIn */,
+				CEA9DC0B291AC0420000ADEF /* PhoneEnter */,
 				CE19F57428F6DD4700DC98F5 /* TemplateViewController.swift */,
-				CE289ADD28F56C8700D10B7C /* SignInViewController.swift */,
 				CE19F57828F6E32200DC98F5 /* SignUpViewController.swift */,
 				CE19F56E28F6C76700DC98F5 /* VerificationViewController.swift */,
+				CE19F57228F6DC1300DC98F5 /* LocationViewController.swift */,
 				CE19F57628F6E2FC00DC98F5 /* LoginViewController.swift */,
-				CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -449,6 +458,47 @@
 				CE9BBB9E290862FC0006A071 /* AccountTableViewCell.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CEA9DC08291ABE040000ADEF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CCCFC28FEA91300874325 /* TabBarController.swift */,
+				CEB63D972919683200BEBE4C /* TabBarCoordinator.swift */,
+				CE04804029012E4C00D4B3E1 /* Home */,
+				CEB4CFB229024FBF00184557 /* Explore */,
+				CEC6EC012903F08500D0A966 /* Cart */,
+				CE9BBB9229081FDA0006A071 /* Favourite */,
+				CE9BBB9A290862AC0006A071 /* Account */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CEA9DC09291ABE300000ADEF /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CE82F45C28F3EE6100A04849 /* WelcomeViewController.swift */,
+				CEB63D942919148A00BEBE4C /* WelcomeCoordinator.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		CEA9DC0A291ABE410000ADEF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CEB63D90291912AF00BEBE4C /* SignInCoordinator.swift */,
+				CE289ADD28F56C8700D10B7C /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		CEA9DC0B291AC0420000ADEF /* PhoneEnter */ = {
+			isa = PBXGroup;
+			children = (
+				CE289AE128F58A9400D10B7C /* PhoneEnterViewController.swift */,
+				CEA9DC0C291AC0660000ADEF /* PhoneEnterCoordinator.swift */,
+			);
+			path = PhoneEnter;
 			sourceTree = "<group>";
 		};
 		CEB4CFB229024FBF00184557 /* Explore */ = {
@@ -651,6 +701,7 @@
 				CEB4CFC2290288D700184557 /* ExploreCategoryViewController.swift in Sources */,
 				CE9BBB982908215B0006A071 /* FavouriteTableViewCell.swift in Sources */,
 				CE2EFC9D29118C60001DCF31 /* ProductDetails.swift in Sources */,
+				CEB63D91291912AF00BEBE4C /* SignInCoordinator.swift in Sources */,
 				CE9BBB942908200D0006A071 /* FavouriteViewController.swift in Sources */,
 				CE3CCCFD28FEA91300874325 /* TabBarController.swift in Sources */,
 				CE4747D4290F126D00D7833E /* ProductDescriptionTableViewCell.swift in Sources */,
@@ -660,8 +711,11 @@
 				CE289AE228F58A9400D10B7C /* PhoneEnterViewController.swift in Sources */,
 				CEB4CFBC290277CA00184557 /* ExploreModel.swift in Sources */,
 				CE9BBB9F290862FC0006A071 /* AccountTableViewCell.swift in Sources */,
+				CEB63D932919138300BEBE4C /* HomeCoordinator.swift in Sources */,
+				CEB63D952919148A00BEBE4C /* WelcomeCoordinator.swift in Sources */,
 				CE069F8228FD2D7100C6C872 /* UnderlinedTextView.swift in Sources */,
 				CE6A1A22290BBCC800F5E8EE /* ProductDetailsViewController.swift in Sources */,
+				CEFBAF442918075700FC7D21 /* Coordinator.swift in Sources */,
 				CEBACB4A28F8163100829273 /* UITextField+Ext.swift in Sources */,
 				CE3BAF5B290B163300CEB1F8 /* Checkout.swift in Sources */,
 				CEB4CFBE29027ADD00184557 /* String+Ext.swift in Sources */,
@@ -678,10 +732,12 @@
 				CE19F57328F6DC1300DC98F5 /* LocationViewController.swift in Sources */,
 				CE5358F92910539E005DD238 /* BaseProductTableViewCell.swift in Sources */,
 				CE3BAF4C290A9DEF00CEB1F8 /* HomeBannerCategory.swift in Sources */,
+				CEA9DC0D291AC0660000ADEF /* PhoneEnterCoordinator.swift in Sources */,
 				CE19F57728F6E2FC00DC98F5 /* LoginViewController.swift in Sources */,
 				CE9BBB96290820480006A071 /* FavouriteModel.swift in Sources */,
 				CE82F45928F3EE6100A04849 /* AppDelegate.swift in Sources */,
 				CE2EFC9F29119E5A001DCF31 /* ReviewTableViewCell.swift in Sources */,
+				CEB63D982919683200BEBE4C /* TabBarCoordinator.swift in Sources */,
 				CE3BAF58290B154400CEB1F8 /* CheckoutTableViewCell.swift in Sources */,
 				CE3BAF50290AA51400CEB1F8 /* HomeBannerCategoryCollectionViewCell.swift in Sources */,
 				CE3BAF48290A634900CEB1F8 /* HomeBanner.swift in Sources */,

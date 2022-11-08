@@ -9,14 +9,14 @@ import UIKit
 
 class LoginViewController: TemplateViewController {
     
-    private lazy var logoImageView: UIImageView = {
+    private var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.logoColoredCarrot)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Loging"
         label.textColor = UIColor(asset: Asset.Colors.titleBlack)
@@ -24,7 +24,7 @@ class LoginViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Enter your emails and password"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -32,7 +32,7 @@ class LoginViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var emailLabel: UILabel = {
+    private var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "Email"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -40,13 +40,13 @@ class LoginViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var emailTextView: UIView = {
+    private var emailTextView: UIView = {
         let view = UnderlinedTextView(placeholder: "")
         view.setText(text: "imshuvo97@gmail.com")
         return view
     }()
     
-    private lazy var passwordLabel: UILabel = {
+    private var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Password"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -54,13 +54,13 @@ class LoginViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var passwordTextView: UIView = {
+    private var passwordTextView: UIView = {
         let view = UnderlinedTextView(placeholder: "", textFieldType: .password)
         view.setText(text: "password")
         return view
     }()
     
-    private lazy var forgotPasswordButton: UIButton = {
+    private var forgotPasswordButton: UIButton = {
         let button = UIButton()
         
         let label = UILabel()
@@ -81,7 +81,7 @@ class LoginViewController: TemplateViewController {
         return button
     }()
     
-    private lazy var signInView: UIView = {
+    private var signInView: UIView = {
         let view = UIView()
         
         let label = UILabel()

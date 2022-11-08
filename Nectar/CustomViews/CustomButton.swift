@@ -22,11 +22,18 @@ class CustomButton: UIButton {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+    init (color: ColorAsset) {
+        super.init(frame: .zero)
+        
+        setUpButton(color: color)
+    }
 
     init (title: String, color: ColorAsset) {
         super.init(frame: .zero)
         
-        setUpButton(title: title, color: color)
+        setUpButton(color: color)
+        addTitle(title: title)
         setUpConstraints()
     }
     
@@ -37,16 +44,20 @@ class CustomButton: UIButton {
         setUpConstraintsWithImage()
     }
     
-    private func setUpButton (title: String, color: ColorAsset) {
-        self.customTitleLabel.text = title
+    private func setUpButton (color: ColorAsset) {
         self.backgroundColor = UIColor(asset: color)
         
         self.layer.cornerRadius = 19
         self.clipsToBounds = true
     }
     
+    private func addTitle (title: String) {
+        self.customTitleLabel.text = title
+    }
+    
     private func setUpButtonWithImage (title: String, color: ColorAsset, imageName: ImageAsset) {
-        setUpButton(title: title, color: color)
+        setUpButton(color: color)
+        addTitle(title: title)
         self.rightImageView.image = UIImage(asset: imageName)
     }
     

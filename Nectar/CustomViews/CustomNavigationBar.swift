@@ -17,10 +17,6 @@ class CustomNavigationBar: UINavigationBar {
     
     private func setUpNavBar () {
         backgroundColor = .white
-        
-        let a = UINavigationItem()
-//        a.backBarButtonItem = UIBarButtonItem(image: UIImage(asset: Asset.Assets.backButton), style: .plain, target: self, action: #selector(popToPrevious))
-        
     }
     
     required init?(coder: NSCoder) {

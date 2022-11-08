@@ -1,17 +1,17 @@
 //
-//  VerificationViewController.swift
+//  PhoneEnterViewController.swift
 //  Nectar
 //
-//  Created by  User on 12.10.2022.
+//  Created by  User on 11.10.2022.
 //
 
 import UIKit
 
-class VerificationViewController: UIViewController {
+class PhoneEnterViewController: TemplateViewController {
     
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Enter your 4-digit code"
+        label.text = "Enter your mobile number"
         label.textColor = UIColor(asset: Asset.Colors.titleBlack)
         label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 26)
         return label
@@ -19,15 +19,14 @@ class VerificationViewController: UIViewController {
     
     private var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Code"
+        label.text = "Mobile Number"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
         label.font = UIFont(font: FontFamily.Gilroy.semiBold, size: 16)
         return label
     }()
     
-    private var codeView: UIView = {
-        let view = UnderlinedTextView(placeholder: "")
-        view.setCodeTextField()
+    private var numberView: UIView = {
+        let view = UnderlinedTextView(placeholder: "", imageName: Asset.Assets.countryFlag, labelText: "+880")
         view.setNumberKeyboard()
         return view
     }()
@@ -35,42 +34,23 @@ class VerificationViewController: UIViewController {
     private lazy var nextButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(asset: Asset.Assets.nextButton), for: .normal)
-        button.addTarget(self, action: #selector(codeEntered), for: .touchUpInside)
+        button.addTarget(self, action: #selector(phoneEntered), for: .touchUpInside)
         return button
     }()
     
-    private lazy var resendButton: UIButton = {
-        let button = UIButton()
-    
-        let label = UILabel()
-        label.text = "Resend Code"
-        label.textColor = UIColor(asset: Asset.Colors.green)
-        label.font = UIFont(font: FontFamily.Gilroy.medium, size: 18)
-        
-        button.addSubview(label)
-        label.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
-        }
-        
-        return button
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpView()
-        addSubviews()
-        configConstraints()
         addKeyboardObserver()
-        addGesture()
     }
     
-    private func setUpView() {
-        view.backgroundColor = UIColor(asset: Asset.Colors.lightGray)
-        
-        let leftBarButton = UIBarButtonItem(image: UIImage(asset: Asset.Assets.backButton), style: .plain, target: self, action: #selector(popToPrevious))
-        self.navigationItem.leftBarButtonItem = leftBarButton
-        self.navigationItem.leftBarButtonItem?.tintColor = .black
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpViewAgain()
+    }
+    
+    private func setUpViewAgain () {
+        navigationController?.navigationBar.isHidden = false
     }
     
     private func addKeyboardObserver () {
@@ -78,18 +58,16 @@ class VerificationViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    private func addGesture () {
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    private func addSubviews() {
-        [titleLabel, subtitleLabel, resendButton, codeView, nextButton].forEach {
+    override func addSubviews() {
+        super.addSubviews()
+        [titleLabel, subtitleLabel, numberView, nextButton].forEach {
             view.addSubview($0)
         }
     }
     
-    private func configConstraints() {
+    override func configConstraints() {
+        super.configConstraints()
+        
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(140)
             $0.leading.equalToSuperview().offset(25)
@@ -100,10 +78,10 @@ class VerificationViewController: UIViewController {
             $0.leading.equalToSuperview().offset(25)
         }
         
-        codeView.snp.makeConstraints {
+        numberView.snp.makeConstraints {
             $0.top.equalTo(subtitleLabel.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview().inset(25)
             $0.height.equalTo(39)
+            $0.leading.trailing.equalToSuperview().inset(25)
         }
         
         nextButton.snp.makeConstraints {
@@ -111,21 +89,6 @@ class VerificationViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-80)
             $0.height.width.equalTo(67)
         }
-        
-        resendButton.snp.makeConstraints {
-            $0.centerY.equalTo(nextButton.snp.centerY)
-            $0.leading.equalToSuperview().offset(25)
-            $0.width.equalTo(112)
-        }
-    }
-    
-    @objc private func popToPrevious (_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @objc private func codeEntered (_ sender: UIButton) {
-        let vc = LocationViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func keyboardWillShow(_ notification: NSNotification) {
@@ -147,5 +110,10 @@ class VerificationViewController: UIViewController {
                 $0.height.width.equalTo(67)
             }
         }
+    }
+    
+    @objc private func phoneEntered (_ sender: UIButton) {
+        let vc = VerificationViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

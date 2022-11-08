@@ -9,14 +9,14 @@ import UIKit
 
 class LocationViewController: TemplateViewController {
     
-    private lazy var locationImageView: UIImageView = {
+    private var locationImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(asset: Asset.Assets.location)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
-    private lazy var titleLabel: UILabel = {
+    private var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Select Your Location"
         label.textColor = UIColor(asset: Asset.Colors.titleBlack)
@@ -24,7 +24,7 @@ class LocationViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    private var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = """
         Swithch on your location to stay in tune with
@@ -37,7 +37,7 @@ class LocationViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var zoneTitle: UILabel = {
+    private var zoneTitle: UILabel = {
         let label = UILabel()
         label.text = "Your Zone"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -45,14 +45,14 @@ class LocationViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var zoneView: UIView = {
+    private var zoneView: UIView = {
         let view = UnderlinedTextView(placeholder: "", textFieldType: .list)
         view.setText(text: "Banasree")
         view.disableUserIneration()
         return view
     }()
     
-    private lazy var areaTitle: UILabel = {
+    private var areaTitle: UILabel = {
         let label = UILabel()
         label.text = "Your Area"
         label.textColor = UIColor(asset: Asset.Colors.subtitleGray)
@@ -60,7 +60,7 @@ class LocationViewController: TemplateViewController {
         return label
     }()
     
-    private lazy var areaView: UIView = {
+    private var areaView: UIView = {
         let view = UnderlinedTextView(placeholder: "Types of your area", textFieldType: .list)
         view.disableUserIneration()
         return view
